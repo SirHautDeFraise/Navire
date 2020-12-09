@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AisShipType extends AbstractController {
+class AisShipTypeController extends AbstractController {
 
   /**
    * @Route("/aisshiptype", name="aisshiptype_")
