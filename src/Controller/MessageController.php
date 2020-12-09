@@ -17,4 +17,12 @@ class MessageController extends AbstractController
             'controller_name' => 'MessageController',
         ]);
     }
+    
+    /**
+     * @Route("/message/contact", name="messagecontact")
+     */
+    public function Formulaire(): Response 
+    {
+      
+    }
 }
