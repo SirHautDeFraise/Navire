@@ -5,18 +5,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+/**
+   * @Route("/aisshiptype/", name="aisshiptype_")
+   */
 class AisShipTypeController extends AbstractController {
 
   /**
-   * @Route("/aisshiptype", name="aisshiptype_")
-   */
-  public function index(): Response {
-    
-  }
-
-  /**
-   * @Route("/voirtous", name="voirtous")
+   * @Route("voirtous", name="voirtous")
    */
   public function voirTous(): Response {
     $types = [
