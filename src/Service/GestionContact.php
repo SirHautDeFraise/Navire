@@ -1,9 +1,12 @@
 <?php
 
+
+namespace App\Service;
+
 use App\Entity\Contact;
 use Twig\Environment;
 use Doctrine\Persistence\ManagerRegistry ;
-use App\Repository\ContactRepository;
+use App\Repository\MessageRepository;
 /**
  * Description of GestionContact
  *
@@ -14,9 +17,9 @@ class GestionContact {
     private \Swift_Mailer $mail;
     private Environment $environnementTwig;
     private ManagerRegistry $doctrine;
-    private ContactRepository $repo;
+    private MessageRepository $repo;
 
-    function __construct(\Swift_Mailer $mail, Environment $environnementTwig, ManagerRegistry $doctrine, ContactRepository $repo) {
+    function __construct(\Swift_Mailer $mail, Environment $environnementTwig, ManagerRegistry $doctrine, MessageRepository $repo) {
         $this->mail = $mail;
         $this->environnementTwig = $environnementTwig;
         $this->doctrine=$doctrine;
