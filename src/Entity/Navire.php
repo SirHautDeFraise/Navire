@@ -10,6 +10,9 @@ use Symfony\Component\Validator\Constraints\Length;
 
 /**
  * @ORM\Entity(repositoryClass=NavireRepository::class)
+ * @ORM\Table(  name="navire" ,
+ *            uniqueConstraints={@ORM\UniqueConstraint(name="mmsi_unique",columns={"mmsi"})}
+ * )
  */
 class Navire {
 
@@ -21,7 +24,7 @@ class Navire {
   private $id;
 
   /**
-   * @ORM\Column(type="string", length=7)
+   * @ORM\Column(type="string", length=7, unique=true)
    * @Assert\Regex(
    *     pattern="/[1-9]{7}/",
    *     message="Le numéro IMO doit comporter 7 chiffres"
@@ -56,6 +59,12 @@ class Navire {
    * @ORM\Column(type="datetime", nullable=true)
    */
   private $eta;
+
+  /**
+   * @ORM\ManyToOne(targetEntity=Pays::class)
+   * @ORM\JoinColumn(name="idpays", nullable=false)
+   */
+  private $lePavillon;
 
   public function getId(): ?int {
     return $this->id;
@@ -109,6 +118,18 @@ class Navire {
     $this->eta = $eta;
 
     return $this;
+  }
+
+  public function getLePavillon(): ?Pays
+  {
+      return $this->lePavillon;
+  }
+
+  public function setLePavillon(?Pays $lePavillon): self
+  {
+      $this->lePavillon = $lePavillon;
+
+      return $this;
   }
 
 }
