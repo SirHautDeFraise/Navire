@@ -9,6 +9,11 @@ use Symfony\Component\Validator\Constraints\Regex;
 
 /**
  * @ORM\Entity(repositoryClass=PaysRepository::class)
+ * @ORM\Table(
+ *            name="pays",
+ *            uniqueConstraints={@ORM\UniqueConstraint(name="indicatif_unique",columns={"indicatif"})},
+ *            indexes={@ORM\Index(name="ind_indicatif", columns={"indicatif"})}
+ *            )
  */
 class Pays
 {
@@ -27,9 +32,9 @@ class Pays
     /**
      * @ORM\Column(type="string", length=3, name="indicatif")
      * @Assert\Regex(
-     *    pattern="/[A-Z]{3}/",
-     *    message="L'indicatif Pays a strictement 3 caractères"
-     * )
+     *            pattern="/[A-Z]{3}",
+     *            message="L'indicatif Pays a strictement 3 caractères"
+     *            )
      */
     private $indicatif;
 

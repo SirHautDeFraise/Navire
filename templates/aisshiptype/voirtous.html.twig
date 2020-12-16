@@ -1,1 +1,18 @@
+{# empty Twig template #}
 {% extends 'base.html.twig' %}
+
+{% block body %}
+  <table class="table table-striped table-dark">
+    <thead class="thead-dark">
+      <tr>
+        <th> Numero type:</th>
+        <th> Libellé </th>
+      </tr>
+    </thead>
+  {% for cle, valeur in types %}
+    <tr>
+      <td>{{ cle}}</td>
+      <td>{{ valeur }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}

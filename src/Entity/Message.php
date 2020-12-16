@@ -5,7 +5,7 @@ namespace App\Entity;
 use App\Repository\MessageRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 
 /**
@@ -33,18 +33,17 @@ class Message
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\Email(
-     *     message = "{{ value }}' n'est pas une adresse mail valide"
+     *            message = "{{ value }} n'est pas une adresse mail valide"
      * )
-     * 
      */
     private $mail;
 
     /**
-     * @ORM\Column(type="text")
-     * @Assert\Length(
-     *                  min=30,
-     *                  minMessage = "Le message à envoyer doit faire au moins {{ limit }} caractères",
-     *                  )
+      * @ORM\Column(type="text")
+      * @Assert\Length(
+     *                    min = 30,
+     *                    minMessage = "Le message à envoyer doit faire au moins {{ limit }} caractères",
+     *                    )
      */
     private $message;
 
