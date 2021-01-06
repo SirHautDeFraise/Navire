@@ -78,12 +78,12 @@ UNLOCK TABLES;
 
 LOCK TABLES `navire` WRITE;
 
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (1,'9007491','CLUB MED 2','227194000','FNIR','2020-11-05 07:00:00',6,60,4,187,20,5.2);
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (2,'9744001','SYMPHONY OF THE SEAS','311000660','C6DF6','2020-12-05 13:30:00',6,133,2,362,66,9);
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (3,'9193680','MSC TIA','255806080','CQIV6','2020-12-09 13:00:00',7,136,12,194,28,11.1);
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (4,'9502910','MAERSK EMERALD','563090400','9V6464','2020-11-29 12:00:00',7,151,16,366,48,14.9);
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (5,'9755933','MSC DIANA','636017433','D5KX8','2020-12-07 22:00:00',7,102,17,400,59,13.6);
-INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirandeau`) VALUES (6,'9280366','CONFIDENCE','636012164','A8DU7','2020-12-14 23:00:00',8,102,22,229,32,7.5);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (1,'9007491','CLUB MED 2','227194000','FNIR','2020-11-05 07:00:00',6,60,4,187,20,5.2);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (2,'9744001','SYMPHONY OF THE SEAS','311000660','C6DF6','2020-12-05 13:30:00',6,133,2,362,66,9);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (3,'9193680','MSC TIA','255806080','CQIV6','2020-12-09 13:00:00',7,136,12,194,28,11.1);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (4,'9502910','MAERSK EMERALD','563090400','9V6464','2020-11-29 12:00:00',7,151,16,366,48,14.9);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (5,'9755933','MSC DIANA','636017433','D5KX8','2020-12-07 22:00:00',7,102,17,400,59,13.6);
+INSERT INTO `navire` (`id`, `imo`, `nom`, `mmsi`, `indicatifappel`, `eta`, `idAisShipType`, `idpays`, `idportdestination`, `longueur`, `largeur`, `tirantdeau`) VALUES (6,'9280366','CONFIDENCE','636012164','A8DU7','2020-12-14 23:00:00',8,102,22,229,32,7.5);
 
 UNLOCK TABLES;
 
