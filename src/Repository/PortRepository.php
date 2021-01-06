@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Port;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * @method Port|null find($id, $lockMode = null, $lockVersion = null)

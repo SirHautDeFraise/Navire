@@ -19,6 +19,12 @@ class PaysRepository extends ServiceEntityRepository
         parent::__construct($registry, Pays::class);
     }
 
+    
+    public function getPaysTriesSurNom()
+    {
+      return $this->createQueryBuilder('p')
+              ->orderBy('p.nom', 'ASC');
+    }
     // /**
     //  * @return Pays[] Returns an array of Pays objects
     //  */

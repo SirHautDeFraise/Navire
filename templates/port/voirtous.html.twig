@@ -1,0 +1,33 @@
+{# empty Twig template #}
+{% extends 'base.html.twig' %}
+
+{% block title %} Ports{% endblock %}
+{% block body %}
+  {% if type %}
+    <div style="text-align: center;">
+      <h3> Ports Compatibles </h3>
+      <h4> Type de navire : {{ type.id }} - {{ type.libelle }} </h4>
+    </div>
+  {% else %}
+    <h2> Non </h2>
+  {% endif %}
+  <div class="container" style="padding-top:10px;">
+    <table class="table table-striped table-dark">
+      <thead class="thead-dark">
+        <tr>
+          <th> Indicatif</th>
+          <th> Nom </th>
+          <th> Pays </th>
+          <th> Actions </th>
+        </tr>
+      </thead>
+      {% for port in ports %}
+        <tr>
+          <td>{{ port.indicatif}}</td>
+          <td>{{ port.nom }}</td>
+          <td>{{ port.lePays.nom }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

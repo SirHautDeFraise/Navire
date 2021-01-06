@@ -46,7 +46,12 @@ class Port
     private $lePays;
 
     /**
-     * @ORM\ManyToMany(targetEntity=AisShipType::class, mappedBy="lesPorts")
+     * @ORM\ManyToMany(targetEntity=AisShipType::class, inversedBy="lesPorts")
+     * @ORM\JoinTable(
+     *        name="porttypecompatible",
+     *        joinColumns={@ORM\JoinColumn(name="idport", referencedColumnName="id")},
+     *        inverseJoinColumns={@ORM\JoinColumn(name="idaistype", referencedColumnName="id")}
+     *        )
      */
     private $lesTypes;
 
