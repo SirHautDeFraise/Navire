@@ -24,7 +24,9 @@
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
+        {{ form_label(registrationForm.agreeTerms, 'Accepter les termes') }}
         {{ form_row(registrationForm.agreeTerms) }}
+        
 
         <button type="submit" class="btn">S'incrire</button>
         {{ form_end(registrationForm) }}
