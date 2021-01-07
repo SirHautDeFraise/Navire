@@ -30,13 +30,13 @@ class GestionContact
       'Messages' => [
         [
           'From' => [
-            'Email' => "lukedussart@hotmail.fr",
-            'Name' => "Luke"
+            'Email' => "laudethibault_pro@outlook.fr",
+            'Name' => "Thibault"
           ],
           'To' => [
             [
               'Email' => $message->getMail(),
-              'Name' => "Luke"
+              'Name' => "Thibault"
             ]
           ],
           'Subject' => "Greetings from Mailjet.",
@@ -59,19 +59,3 @@ class GestionContact
     $em->flush();
   }
 }
-
-/*$email = (new \Swift_Message('Demande de renseignement'))
-      ->setFrom([$message->getMail() => 'Nouvelle demande'])
-      ->setTo('lukedussart@hotmail.fr');
-    $email->setBody(
-      $this->environnementTwig->render(
-        'mail/mail.html.twig',
-        ['message' => $message]
-      ),
-      'text/html'
-    );
-    
-    $email->attach(\Swift_Attachment::fromPath('documents/document.pdf'));
-    $this->mail->send($email);
-     */
-  
