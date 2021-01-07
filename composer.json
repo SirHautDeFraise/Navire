@@ -6,7 +6,9 @@
     "ext-ctype": "*",
     "ext-iconv": "*",
     "composer/package-versions-deprecated": "1.11.99.1",
+    "doctrine/data-fixtures": "* 1.4.4",
     "doctrine/doctrine-bundle": "^2.2",
+    "doctrine/doctrine-fixtures-bundle": "* 3.4.0",
     "doctrine/doctrine-migrations-bundle": "^3.0",
     "doctrine/orm": "^2.7",
     "mailjet/mailjet-apiv3-php": "v1.5.0",
@@ -27,8 +29,6 @@
     "symfony/validator": "4.4.*",
     "symfony/web-profiler-bundle": "4.4.*",
     "symfony/yaml": "4.4.*"
-  },
-  "require-dev": {
   },
   "config": {
     "preferred-install": {
